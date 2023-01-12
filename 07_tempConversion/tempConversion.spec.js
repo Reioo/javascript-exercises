@@ -7,13 +7,13 @@ describe('convertToCelsius', () => {
   test('rounds to 1 decimal', () => {
     expect(convertToCelsius(100)).toEqual(37.8);
   });
-  test.skip('works with negatives', () => {
+  test('works with negatives', () => {
     expect(convertToCelsius(-100)).toEqual(-73.3);
   });
 });
 
 describe('convertToFahrenheit', () => {
-  test.skip('works', () => {
+  test('works', () => {
     expect(convertToFahrenheit(0)).toEqual(32);
   });
   test.skip('rounds to 1 decimal', () => {

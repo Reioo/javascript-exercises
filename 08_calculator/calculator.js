@@ -1,14 +1,17 @@
 const add = function(a, b) {
-	console.log(a + b)
   return a + b;
 };
 
-const subtract = function() {
-	
+const subtract = function(a, b) {
+  console.log(a - b);
+  return a - b;
 };
 
-const sum = function() {
-	
+const sum = function(arr) {
+	const totalSum = arr.reduce((total, number) => {
+    return total + number;
+  }, 0);
+  return totalSum;
 };
 
 const multiply = function() {
@@ -22,8 +25,7 @@ const power = function() {
 const factorial = function() {
 	
 };
-add(1, 3);
-
+console.log(sum([4, 6, 8]));
 
 // Do not edit below this line
 module.exports = {

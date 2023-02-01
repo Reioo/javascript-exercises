@@ -34,13 +34,19 @@ const power = function(num, n) {
   return total;
 };
 
-console.log(power(0, 1));
-
-const factorial = function() {
-	
+const factorial = function(number) {
+  let total = number;
+  if(number == 0) {
+    return 1; 
+  } else {
+    for(let i = number - 1; i > 0; i--) {
+      total *= i;
+    }
+    return total;
+  }
 };
-console.log(multiply([])
-);
+console.log(factorial(5));
+
 // Do not edit below this line
 module.exports = {
   add,

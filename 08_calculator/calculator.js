@@ -14,8 +14,16 @@ const sum = function(arr) {
   return totalSum;
 };
 
-const multiply = function() {
-
+const multiply = function(arr) {
+  const totalMultiplied = arr.reduce((total, number) => {
+      return total * number;
+  }, 1); //First time total is undefined, if it would be 0 
+         //then all numbers would be multiplied by 0
+  if(arr.length == 0) {
+    return 0;
+  } else {
+    return totalMultiplied;
+  }
 };
 
 const power = function() {
@@ -25,8 +33,8 @@ const power = function() {
 const factorial = function() {
 	
 };
-console.log(sum([4, 6, 8]));
-
+console.log(multiply([])
+);
 // Do not edit below this line
 module.exports = {
   add,

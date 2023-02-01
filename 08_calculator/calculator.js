@@ -26,9 +26,15 @@ const multiply = function(arr) {
   }
 };
 
-const power = function() {
-	
+const power = function(num, n) {
+  let total = num;
+	for(let i = 1; i < n; i++) {
+    total *= num;
+  }
+  return total;
 };
+
+console.log(power(0, 1));
 
 const factorial = function() {
 	

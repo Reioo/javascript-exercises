@@ -1,7 +1,15 @@
-const findTheOldest = function(arr) {
+function sortPeopleByAge(arr) {
     const oldest = arr.sort((a, b) => {
-        console.log(`a: ${a.yearOfBirth} \n b: ${b.yearOfBirth}`);
+        const nextGuy = a.yearOfDeath - a.yearOfBirth;
+        const lastGuy = b.yearOfDeath - b.yearOfBirth;
+        return (lastGuy < nextGuy) ? -1 : 1;
     })
+    return oldest;
+}
+
+const findTheOldest = function(arr) {
+    const sortedByAge = sortPeopleByAge(arr);
+    return sortedByAge[0].name;
 };
 
 const people = [
@@ -21,6 +29,6 @@ const people = [
       yearOfDeath: 1941,
     },
   ]
- findTheOldest(people);
+ console.log(findTheOldest(people)); 
 // Do not edit below this line
 module.exports = findTheOldest;
